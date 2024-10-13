@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './img/Logo.svg';
 
 function Footer() {
 
@@ -7,32 +8,40 @@ function Footer() {
 // ul needs to be titled
 
     return (
-        <div>
-            <img src={logo} alt="Logo" />;
+        <div class="footer-main">
+            <div class="logo">
+                <img src={logo} alt="Logo" />
+            </div>
 
-            <ul>
-                <li><h1>Doormat Navigation</h1></li>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservations">Reservations</a></li>
-                <li><a href="/order">Order Online</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
+            <div class="footer-navbar">
+                <div class="footerColHead" role="Heading">Nav</div>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/reservations">Reservations</a></li>
+                    <li><a href="/order">Order Online</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li><h1>Contact</h1></li>
-                <li>Adress</li>
-                <li>Phone number</li>
-                <li><a href="/login">Email</a></li>
-            </ul>
+            <div class="footer-contact">
+                <div class="footerColHead" role="Heading">Contact us</div>
+                <ul>
+                    <li>Adress</li>
+                    <li>Phone number</li>
+                    <li><a href="/login">Email</a></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li><h1>Social Media</h1></li>
-                <li><a href="/instagram">Insta icon</a></li>
-                <li><a href="/instagram">Insta icon</a></li>
-                <li><a href="/instagram">Insta icon</a></li>
-            </ul>
+            <div class="footer-social">
+                <div class="footerColHead" role="Heading">Follow us</div>
+                <ul>
+                    <li><a href="/instagram">Insta icon</a></li>
+                    <li><a href="/instagram">Insta icon</a></li>
+                    <li><a href="/instagram">Insta icon</a></li>
+                </ul>
+            </div>
         </div>
     );
 };
