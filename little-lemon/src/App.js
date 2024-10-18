@@ -1,29 +1,23 @@
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from './Nav.js';
-import Header from './Header.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
+import HomePage from './HomePage.js';
+import About from './About.js';
+import Menu from './Menu.js';
+import BookingPage from './BookingPage.js';
+import Order from './Order.js';
+import Login from './Login.js';
 
 
 function App() {
   return (
     <div>
-          <Nav>
+      <HomePage>
 
-          </Nav>
-
-          <Header>
-
-          </Header>
-
-          <Main>
-
-          </Main>
-
-          <Footer>
-
-          </Footer>
+      </HomePage>
     </div>
+
   );
 }
 

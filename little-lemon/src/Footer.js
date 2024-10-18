@@ -3,10 +3,6 @@ import logo from './img/Logo.svg';
 
 function Footer() {
 
-// need img
-// need 3 diff ul with li inside
-// ul needs to be titled
-
     return (
         <div class="footer-main">
             <div class="logo">
@@ -26,7 +22,7 @@ function Footer() {
             </div>
 
             <div class="footer-contact">
-                <div class="footerColHead" role="Heading">Contact us</div>
+                <div class="footerColHead" role="Heading">Contact Us</div>
                 <ul>
                     <li>Adress</li>
                     <li>Phone number</li>
@@ -35,7 +31,7 @@ function Footer() {
             </div>
 
             <div class="footer-social">
-                <div class="footerColHead" role="Heading">Follow us</div>
+                <div class="footerColHead" role="Heading">Social Media Links</div>
                 <ul>
                     <li><a href="/instagram">Insta icon</a></li>
                     <li><a href="/instagram">Insta icon</a></li>

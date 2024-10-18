@@ -1,11 +1,17 @@
 import React from 'react';
-import logo from './img/Logo.svg';
+import ReactDOM from 'react-dom/client';
+import { Routes, Route } from "react-router-dom";
+import App from './App';
+import HomePage from './HomePage.js';
+import About from './About.js';
+import Menu from './Menu.js';
+import BookingPage from './BookingPage.js';
+import Order from './Order.js';
+import Login from './Login.js';
+import Nav from './Nav.js';
 
-function Main() {
+export default function Main() {
     return (
-        <div></div>
+        <div>zzaeaz</div>
     );
-
-};
-
-export default Main;
+  };

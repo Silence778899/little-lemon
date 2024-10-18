@@ -9,23 +9,24 @@
   justify-content: center;
   align-self: center;
   grid-template-rows: auto auto;
+  grid-template-columns: auto;
   grid-auto-rows: 0px;
   text-align: center;
 }
 
 .nav-main {
   display: flex;
-  position: static;
-  float: left;
+  position: relative;
   overflow: visible;
   align-items: center;
   justify-content: center;
-  padding: 5%;
   flex-direction: row;
   white-space: nowrap;
   min-width: 1000px;
+  max-width: 100%;
   max-height: 39px;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: auto;
 }
 
@@ -39,10 +40,44 @@
 
 .logo {
   display: flex;
-  margin-left: 15px;
   padding: 4px 0 0 0;
   position: relative;
   flex-shrink: 0;
+}
+
+.call-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #495E57;
+}
+
+.call-text{
+  position: relative;
+  float: left;
+  width: auto;
+
+}
+
+.call-main img {
+  position: relative;
+  max-width: 100%;
+  max-height: 404px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+}
+
+.call-main button {
+  background-color: #f4ce14;
+  padding: 16px 30px;
+  font: Karla;
+  font-size: 18;
+  font-weight: 800;
+  color:black;
+  border-radius: 5px;
 }
 
 a:link {
@@ -80,7 +115,6 @@ li.horizontal a {
 
 .footer-main {
   display: flex;
-  float: left;
   position: relative;
   overflow: visible;
   align-items: top;

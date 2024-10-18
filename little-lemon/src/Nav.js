@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './img/Logo.svg';
+import { Link } from "react-router-dom";
 
 function Nav() {
     return (
@@ -9,12 +10,12 @@ function Nav() {
             </div>
             <div class="nav-fill">
                 <ul>
-                    <li class="horizontal"><a href="/home">Home</a></li>
-                    <li class="horizontal"><a href="/about">About</a></li>
-                    <li class="horizontal"><a href="/menu">Menu</a></li>
-                    <li class="horizontal"><a href="/reservations">Reservations</a></li>
-                    <li class="horizontal"><a href="/order">Order Online</a></li>
-                    <li class="horizontal"><a href="/login">Login</a></li>
+                    <li class="horizontal"><Link to='/HomePage'>Home</Link></li>
+                    <li class="horizontal"><Link to="/About">About</Link></li>
+                    <li class="horizontal"><Link to="/Menu">Menu</Link></li>
+                    <li class="horizontal"><Link to="/BookingPage">Reservations</Link></li>
+                    <li class="horizontal"><Link to="/Order">Order Online</Link></li>
+                    <li class="horizontal"><Link to="/Login">Login</Link></li>
                 </ul>
             </div>
         </div>
