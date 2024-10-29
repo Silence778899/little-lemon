@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text');
+
+body {
+  font-family: "Karla", sans-serif;
+  font-family: "Markazi Text", sans-serif;
+}
+
 :root {
   --main-yellow:#f4ce14;
   --main-green:#495E57;
@@ -31,9 +39,9 @@
 }
 
 .nav-main a {
-  font: Karla;
-  font-size: 20;
-  font-weight: 700;
+  font-family: 'Karla';
+  font-size: 12pt;
+  font-weight: 1000;
   color: black;
   margin: 0;
 }
@@ -54,11 +62,33 @@
   background-color: #495E57;
 }
 
-.call-text{
+.call-text {
   position: relative;
   float: left;
   width: auto;
+}
 
+.call-text h1 {
+  font-family: "Markazi Text";
+  font-size: 64pt;
+  font-weight: 700;
+  color: #f4ce14;
+  line-height: 50%;
+}
+
+.call-text h2 {
+  font-family: "Karla";
+  font-size: 40pt;
+  font-weight: 500;
+  color: white;
+  line-height: 50%;
+}
+
+.call-text p {
+  font-family: "Markazi Text";
+  font-size: 16pt;
+  color: white;
+  line-height: 140%;
 }
 
 .call-main img {
@@ -73,11 +103,83 @@
 .call-main button {
   background-color: #f4ce14;
   padding: 16px 30px;
-  font: Karla;
-  font-size: 18;
+  font-family: 'Karla';
+  font-size: 16pt;
   font-weight: 800;
   color:black;
   border-radius: 5px;
+}
+
+.specials-header {
+  font-family: 'Markazi Text';
+  font-size: 18pt;
+  font-weight: 1200;
+  color: black;
+}
+.specials-header button {
+  background-color: #f4ce14;
+  padding: 16px 30px;
+  font-family: 'Karla';
+  font-size: 16pt;
+  font-weight: 800;
+  color:black;
+  border-radius: 5px;
+}
+
+.specials-card-overlay {
+  background-color: #EDEFEE;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  column-gap: 6;
+  max-width: 1640px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.specials-card-title {
+  font-family: 'Markazi Text';
+  font-size: 18pt;
+  font-weight: 700;
+  color: black;
+  line-height: 90%;
+}
+
+.specials-card-price {
+  font-family: 'Ubuntu';
+  font-size: 16pt;
+  font-weight: 500;
+  color:#EE9972;
+}
+
+.specials-card-description {
+  font-family: 'Karla';
+  font-size: 16pt;
+  color: black;
+}
+
+.specials-card-image {
+  max-height: auto;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.delivery-link a {
+  font-family: 'Karla';
+  font-size: 16pt;
+  font-weight: 700;
+  color: black;
+}
+
+#bike-icon {
+  max-height: 25px;
+  max-width: 30px;
 }
 
 a:link {
@@ -113,7 +215,74 @@ li.horizontal a {
   color: #61dafb;
 }
 
+.chicago-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chicago-text {
+  position: relative;
+  float: left;
+  width: auto;
+}
+
+.chicago-text h1 {
+  font-family: "Markazi Text";
+  font-size: 64pt;
+  font-weight: 500;
+  color: black;
+}
+
+.chicago-text h2 {
+  font-family: "Markazi Text";
+  font-size: 40pt;
+  font-weight: 100;
+  color: #333333;
+}
+
+.chicago-text p {
+  font-family: "Karla";
+  font-size: 16pt;
+  font-weight: 700;
+  color: black;
+}
+
+.chicago-main img {
+  position: relative;
+  max-width: 100%;
+  max-height: 404px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+}
+
+.review-main {
+  background-color: #EDEFEE;
+  font-family: "Karla";
+  font-weight: 700;
+  text-align: center;
+}
+
+.review-card-background {
+  background-color: white;
+  max-width: 1640px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.review-card-review {
+  font-weight: 300;
+}
+
+
+
+
+
 .footer-main {
+  background-color: #EDEFEE;
   display: flex;
   position: relative;
   overflow: visible;
@@ -129,8 +298,8 @@ li.horizontal a {
 }
 
 .footerColHead {
-  font: Karla;
-  font-size: 20;
+  font-family: 'Karla';
+  font-size: 14pt;
   font-weight: 700;
   color: var(--main-green);
   margin: 0;
@@ -142,14 +311,14 @@ li.horizontal a {
 
 .footer-main li {
   color: black;
-  font: Karla;
-  font-size: 20;
+  font-family: 'Karla';
+  font-size: 12pt;
 }
 
 .footer-main a {
   color: black;
-  font: Karla;
-  font-size: 20;
+  font-family: 'Karla';
+  font-size: 12pt;
 }
 
 .footer-contact {
