@@ -8,29 +8,29 @@ import Chicago from './Chicago.js';
 
 function HomePage() {
     return (
-        <div>
-            <Nav>
-            </Nav>
+        <div class="site-wrapper">
+                <Nav>
+                </Nav>
 
-            <CallToAction>
+                <CallToAction>
 
-            </CallToAction>
+                </CallToAction>
 
-            <Specials>
+                <Specials>
 
-            </Specials>
+                </Specials>
 
-            <CustomersSay>
+                <CustomersSay>
 
-            </CustomersSay>
+                </CustomersSay>
 
-            <Chicago>
+                <Chicago>
 
-            </Chicago>
+                </Chicago>
 
-            <Footer>
+                <Footer>
 
-            </Footer>
+                </Footer>
         </div>
     );
 

@@ -12,7 +12,7 @@ export const cardItem = [
     },
     {
       id: 2,
-      title: "Bruchetta",
+      title: "Bruschetta",
       price: "$ 5.99",
       text: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
       image: bruchetta

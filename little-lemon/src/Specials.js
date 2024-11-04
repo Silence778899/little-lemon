@@ -1,5 +1,5 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import ButtonLink from './ButtonLink';
 import { cardItem } from './cardItem.js';
 import SpecialsCards from './SpecialsCards.js';
@@ -9,16 +9,14 @@ function Specials() {
         <div class="specials-main">
             <div class="specials-header">
                 <h1>This week's Specials!</h1>
-                <ButtonLink variant="contained" id="btnYellow" to="/Menu">Full Menu</ButtonLink>
+                <ButtonLink id="btnYellow" to="/Menu">See Our Menu</ButtonLink>
             </div>
 
-            <div class='container'>
-                <Row>
+            <Container fluid style={{display: 'flex', flexDirection: 'row', justifyContent: "center", paddingBottom: "10%", gap: "10px"}}>
                     {cardItem.map(special => (
                         <SpecialsCards key={special.id} special={special} />
                     ))}
-                </Row>
-            </div>
+            </Container>
         </div>
     );
 };
