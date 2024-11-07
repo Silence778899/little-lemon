@@ -1,5 +1,5 @@
 import React from 'react';
-import chicagoImage1 from './img/chicagoImage1.jpg';
+import MyGallery from './ImgGallery';
 
 function Chicago() {
     return (
@@ -10,8 +10,8 @@ function Chicago() {
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
             </div>
-            <div class="chicago-img1">
-                <img src={chicagoImage1} alt="chicagoImage1" />
+            <div class="chicago-gallery">
+                <MyGallery></MyGallery>
             </div>
         </div>
     );
