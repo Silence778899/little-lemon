@@ -5,7 +5,6 @@ import App from './App';
 import HomePage from './HomePage.js';
 import About from './About.js';
 import Menu from './Menu.js';
-import BookingPage from './BookingPage.js';
 import Order from './Order.js';
 import Login from './Login.js';
 import Nav from './Nav.js';

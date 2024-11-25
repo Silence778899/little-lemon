@@ -9,27 +9,23 @@ import Chicago from './Chicago.js';
 function HomePage() {
     return (
         <div class="site-wrapper">
+            <script src="https://raw.githubusercontent.com/courseraap/capstone/main/api.js"></script>
                 <Nav>
                 </Nav>
 
                 <CallToAction>
-
                 </CallToAction>
 
                 <Specials>
-
                 </Specials>
 
                 <CustomersSay>
-
                 </CustomersSay>
 
                 <Chicago>
-
                 </Chicago>
 
                 <Footer>
-
                 </Footer>
         </div>
     );
