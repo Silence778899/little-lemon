@@ -1,9 +1,10 @@
 import React, { useReducer } from "react";
+import { useNavigate } from 'react-router-dom';
 import BookingForm from "./BookingForm.js";
 import Nav from "./Nav.js";
 import Footer from "./Footer.js";
-
-<script src="https://raw.githubusercontent.com/courseraap/capstone/main/api.js"></script>
+import pages from "./pages.js";
+import { fetchAPI, submitAPI } from "./FakeAPI.js";
 
 const updateTimes = (availableTimes, date) => {
     const response = fetchAPI(new Date(date));
@@ -18,11 +19,12 @@ const BookingPage = () => {
         availableTimes,
         dispatchOnDateChange
       ] = useReducer(updateTimes, [], initializeTimes);
+      const navigate = useNavigate();
 
-const submitData = formData => {
-    const response = submitAPI(formData);
-    if (response) console.log("booking confirmed! page under construction");
-    };
+    const submitForm = formData => {
+        const response = submitAPI(formData);
+        if (response) navigate(pages.get('confirmedBooking').path);
+        };
 
     return (
         <div class="site-wrapper">
@@ -30,7 +32,7 @@ const submitData = formData => {
             <BookingForm
                 availableTimes={availableTimes}
                 dispatchOnDateChange={dispatchOnDateChange}
-                submitData={submitData} />
+                submitForm={submitForm} />
             <Footer></Footer>
         </div>
     );

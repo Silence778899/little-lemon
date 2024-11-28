@@ -1,20 +1,38 @@
 import React, { useState } from "react";
+import FormField from "./FormField";
 
-const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
+const BookingForm = ({
+    availableTimes,
+    dispatchOnDateChange,
+    submitForm
+}) => {
 
     const minimumDate = new Date().toISOString().split('T')[0];
-    const defaultTime = availableTimes[0];
+   const defaultTime = availableTimes[0];
     const minimumNumberOfGuests = 1;
     const maximumNumberOfGuests = 10;
-    const occasions = ['Birthday', 'Anniversary'];
-
-    // should have a bunch of anti error consts
+    const occasions = ['Social Event', 'Birthday', 'Anniversary'];
+    const invalidDateErrorMessage = 'Please choose a valid date';
+    const invalidTimeErrorMessage = 'Please choose a valid time';
+    const invalidOccasionErrorMessage = 'Please choose a valid occasion';
+    const invalidGuestsErrorMessage =
+      'Please enter a number between 1 and 10';
 
     const [date, setDate] = useState(minimumDate);
     const [time, setTime] = useState(defaultTime);
     const [guests, setGuests] = useState(minimumNumberOfGuests);
     const [occasion, setOccasion] = useState(occasions[0]);
 
+    const isDateValid = () => date !== '';
+    const isTimeValid = () => time !== '';
+    const isGuestsValid = () => guests !== '';
+    const isOccasionValid = () => occasion !== '';
+
+     const areAllFieldsValid = () =>
+        isDateValid()
+        && isTimeValid()
+        && isGuestsValid()
+        && isOccasionValid();
 
     function handleDateChange(e){
         setDate(e.target.value);
@@ -33,39 +51,94 @@ const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        submitData({ date, time, guests, occasion, });
+        submitForm({ date, time, guests, occasion, });
     };
 
     return (
         //stuff to display
-        // add a bunch of req/error related logic
         <div>
-            <heading>Book Now</heading>
+            <h1>Book Now</h1>
             <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit}>
-                    <label htmlFor="res-date">Choose date</label>
-                    <input type="date" id="res-date" onChange={handleDateChange}/>
-
-                    <label htmlFor="res-time">Choose time</label>
-                    <select id="res-time " value={time} required={true} onChange={handleTimeChange}>
-                        {availableTimes.map(times => (
-                        <option data-testid="booking-time-option" key={times}>
+                    <FormField
+                        aria-label="Date"
+                        htmlFor="res-date"
+                        hasError={!isDateValid()}
+                        errorMessage={invalidDateErrorMessage}
+                    >
+                        <input
+                            type="date"
+                            id="res-date"
+                            name="res-date"
+                            min={minimumDate}
+                            value={date}
+                            aria-required={true}
+                            onChange={handleDateChange}
+                        />
+                    </FormField>
+                    <FormField
+                        aria-label="Time"
+                        htmlFor="res-time"
+                        hasError={!isTimeValid()}
+                        errorMessage={invalidTimeErrorMessage}
+                    >
+                        <select
+                        id="res-time"
+                        name="res-time"
+                        value={time}
+                        aria-required={true}
+                        onChange={handleTimeChange}
+                        >
+                        {availableTimes.map(times =>
+                            <option data-testid="res-time-option" key={times}>
                             {times}
-                        </option>
-                        ))}
-                    </select>
-
-                    <label htmlFor="guests">Number of guests</label>
-                    <input type="number" min={minimumNumberOfGuests} max={maximumNumberOfGuests} id="guests" value={guests} required={true} onChange={handleGuestsChange}/>
-
-                    <label htmlFor="occasion">Occasion</label>
-                    <select id="booking-occasion" name="booking-occasion" value={occasion} required={true} onChange={handleOccasionChange}>
-                        {occasions.map(occasion =>
-                        <option data-testid="booking-occasion-option" key={occasion}>
-                        {occasion}
-                        </option>
+                            </option>
                         )}
-                    </select>
-                    <input type="submit" value="Make Your reservation"/>
+                        </select>
+                    </FormField>
+                    <FormField
+                        aria-label="Number of guests"
+                        htmlFor="guests"
+                        hasError={!isGuestsValid()}
+                        errorMessage={invalidGuestsErrorMessage}
+                    >
+                        <input
+                        type="number"
+                        id="guests"
+                        name="guests"
+                        value={guests}
+                        min={minimumNumberOfGuests}
+                        max={maximumNumberOfGuests}
+                        aria-required={true}
+                        onChange={handleGuestsChange}
+                        />
+                    </FormField>
+                    <FormField
+                        aria-label="Occasion"
+                        htmlFor="booking-occasion"
+                        hasError={!isOccasionValid()}
+                        errorMessage={invalidOccasionErrorMessage}
+                    >
+                        <select
+                        id="booking-occasion"
+                        name="booking-occasion"
+                        value={occasion}
+                        aria-required={true}
+                        onChange={handleOccasionChange}
+                        >
+                        {occasions.map(occasion =>
+                            <option data-testid="booking-occasion-option" key={occasion}>
+                            {occasion}
+                            </option>
+                        )}
+                        </select>
+                    </FormField>
+                    <button
+                        className="button-primary"
+                        type="submit"
+                        disabled={!areAllFieldsValid()}
+                    >
+                        Make your reservation
+                    </button>
             </form>
         </div>
 

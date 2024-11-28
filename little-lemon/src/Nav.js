@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 function Nav() {
     return (
-        <div class="nav-main">
-            <div class="logo">
+        <div className="nav-main">
+            <div className="logo">
                 <img src={logo} alt="Logo" />
             </div>
-            <div class="nav-fill">
+            <div className="nav-fill">
                 <ul>
                     <li class="horizontal"><Link to='/HomePage'>Home</Link></li>
                     <li class="horizontal"><Link to="/About">About</Link></li>
