@@ -13,13 +13,15 @@ root.render(
    <React.StrictMode>
       <BrowserRouter>
          <Routes>
-            <Route path="/" Component={App}>
-            </Route>
             <Route path="/BookingPage" Component={BookingPage}>
             </Route>
             <Route path="/Homepage" Component={HomePage}>
             </Route>
             <Route path="/ConfirmedBooking" Component={ConfirmedBooking}>
+            </Route>
+            <Route path="/" Component={HomePage}>
+            </Route>
+            <Route path="/{little-lemon}" Component={HomePage}>
             </Route>
          </Routes>
       </BrowserRouter>

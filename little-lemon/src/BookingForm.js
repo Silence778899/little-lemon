@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormField from "./FormField";
+import chicagoImage2 from './img/chicagoImage2.jpg';
 
 const BookingForm = ({
     availableTimes,
@@ -55,16 +56,15 @@ const BookingForm = ({
     };
 
     return (
-        //stuff to display
-        <div>
-            <h1>Book Now</h1>
-            <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit}>
+        <div class="booking-main">
+            <h1 style={{fontFamily: "Karla", fontWeight: "700", textAlign: "center"}}>Book Now</h1>
+            <form style={{fontFamily: "Markazi Text", fontSize: "20pt", fontWeight: "500", gap: "20px", paddingLeft: "20%", paddingRight: "20%"}} onSubmit={handleSubmit}>
                     <FormField
                         aria-label="Date"
                         htmlFor="res-date"
                         hasError={!isDateValid()}
                         errorMessage={invalidDateErrorMessage}
-                    >
+                    > Date
                         <input
                             type="date"
                             id="res-date"
@@ -80,7 +80,7 @@ const BookingForm = ({
                         htmlFor="res-time"
                         hasError={!isTimeValid()}
                         errorMessage={invalidTimeErrorMessage}
-                    >
+                    > Time
                         <select
                         id="res-time"
                         name="res-time"
@@ -100,7 +100,7 @@ const BookingForm = ({
                         htmlFor="guests"
                         hasError={!isGuestsValid()}
                         errorMessage={invalidGuestsErrorMessage}
-                    >
+                    > Number of Guests
                         <input
                         type="number"
                         id="guests"
@@ -117,7 +117,7 @@ const BookingForm = ({
                         htmlFor="booking-occasion"
                         hasError={!isOccasionValid()}
                         errorMessage={invalidOccasionErrorMessage}
-                    >
+                    > Select Occasion
                         <select
                         id="booking-occasion"
                         name="booking-occasion"
@@ -137,9 +137,10 @@ const BookingForm = ({
                         type="submit"
                         disabled={!areAllFieldsValid()}
                     >
-                        Make your reservation
+                        Confirm Reservation
                     </button>
             </form>
+            <div class="booking-img"><img src={chicagoImage2} alt="tableImage" id="chicagoImage2" /></div>
         </div>
 
     )
