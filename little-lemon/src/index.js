@@ -17,7 +17,7 @@ root.render(
             </Route>
             <Route path="/Homepage" Component={HomePage}>
             </Route>
-            <Route path="/ConfirmedBooking" Component={ConfirmedBooking}>
+            <Route path="/confirmed-booking" Component={ConfirmedBooking}>
             </Route>
             <Route path="/" Component={HomePage}>
             </Route>
